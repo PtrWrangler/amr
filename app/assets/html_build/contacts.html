@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+@@include('./head.html')
+
+  <body id="contacts__page">
+		
+    <!-- Info Section
+    ================================================== -->
+    <div class="section__info">
+      @@include('./top.html')
+
+    <!-- CONTENT
+      ================================================== -->
+
+    <!-- section home -->
+    <section class="section__home" id="section__home">
+    	<div class="container">
+    	  <div class="row">
+    	    <div class="col-sm-12">
+    	    	<div class="welcome__content">
+							<h2 class="welcome_content__title">Contactez nous</h2>
+    					<p class="welcome_content__desc">Envoie-nous un message!</p>
+    				</div> <!-- .welcome__content -->
+    	    </div>
+    	  </div> <!-- / .row -->
+    	</div> <!-- / .container -->
+			<div class="home__bg"></div>
+    </section> <!-- / .section home -->
+
+		<!-- section Contacts -->
+    <section class="section__contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1 class="subheading">Si vous avez des questions, n'hésitez pas à nous contacter.</h1>        
+          </div>
+        </div> <!-- / .row -->
+      	<div class="row">
+      		<div class="col-sm-7">
+	        	<div class="section-contacts__form_body">
+              <p class="section-contacts__title">Entrer en contact</p>
+
+              <!-- Alert message -->
+              <div class="alert" id="form_message" role="alert"></div>
+
+              <!-- Please carefully read the README file in order to setup the PHP contact form properly -->
+              <form id="form_sendemail" class="contacts__form" data-animate-in="animateUp">
+                <div class="form-group">
+                  <label for="email">Addresse Email</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Entrer votre Email" data-original-title="" title="">
+                  <span class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Nom</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Entrez votre nom complet" data-original-title="" title="">
+                  <span class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea name="message" class="form-control" rows="6" id="message" placeholder="Entrez votre message"></textarea>
+                  <span class="help-block"></span>
+                </div>
+                <!-- reCAPTCHA -->
+                <div class="form-group" id="form-captcha">
+                  <div class="g-recaptcha" data-sitekey="6LcH1RcUAAAAACsvookS7-U-Hx48PioWoSCgsbH6"></div>
+                  <span class="help-block"></span>
+                </div>
+                <!-- /reCAPTCHA -->
+                <div class="btn-group">
+                  <button type="submit" class="btn">
+                    Envoyer le message
+                  </button>
+                </div>
+              </form>
+            </div> <!-- / .section-contacts__form_body -->
+	        </div>
+	        <div class="col-sm-5">
+						<div class="contacts__info">
+							<p class="contacts_info__title">Information</p>
+							<ul class="contacts_info__content">
+                
+	              <li>
+	                <i class="icon ion-android-pin"></i>
+	                <div class="contact-info-content">
+	                  <div class="title">Addresse</div>
+	                  <div class="description">1365 Boulevard René-Lévesque Ouest, Québec, Canada, G1S-1W9</div>
+	                </div>
+	              </li>
+	              <li>
+	                <i class="icon ion-android-call"></i>
+	                <div class="contact-info-content">
+	                  <div class="title">Téléphone / Téléc</div>
+	                  <div class="description">(418) 527-3907 /  1-514-221-2056</div>
+	                </div>
+	              </li>
+	              <li>
+	                <i class="icon ion-android-mail"></i>
+	                <div class="contact-info-content">
+	                  <div class="title">E-mail</div>
+	                  <div class="description">AubergeHotelVillaRoyale@gmail.com</div>
+	                </div>
+	              </li>
+	            </ul>
+						</div> <!-- / .contacts__info -->
+	        </div>
+	      </div> <!-- / .row -->
+      </div> <!-- / .container -->
+      <div class="section_row">
+        <div id="map"></div>
+      </div> <!-- / .section_row -->
+    </section> <!-- / .section__contacts -->
+
+
+		<!-- section footer -->
+    @@include('./footer.html')
+
+    <!-- 
+    ================================================== -->
+
+    <!-- JS Global -->
+    <script src="assets/plugins/jquery/jquery-1.12.4.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- JS Plugins -->
+		<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="assets/plugins/contact-form/contact.js"></script>
+
+    <!-- JS Custom -->
+    <!--build:js assets/js/theme.min.js -->
+    <script src="assets/js/theme.js"></script>
+    <!-- endbuild -->
+		<script src="assets/js/google_maps.js"></script>
+
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTGnDWmYKPhKslCvPfkrcZDpgT_QMHT0s&callback=initMap" async defer></script>
+
+  </body>
+</html>

@@ -1,0 +1,378 @@
+/**
+ * Custom Styles for reservation.html
+ */
+
+#reservation__page {
+	
+	/*** . Section: General styles ***/
+
+	.divider {
+		margin-bottom: 30px;
+		.line1 {
+			height: 1px;
+			width: 50px;
+			background-color: @brand-accent;
+			margin: 3px auto;
+		}
+		.line2 {
+			height: 1px;
+			width: 200px;
+			background-color: @brand-accent;
+			margin: 3px auto;
+		}
+	}
+
+	.section__title {
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 42px;
+		text-transform: uppercase;
+		> strong {
+			color: @brand-accent;
+		}
+		@media (max-width: @screen-xs-max) {
+			font-size: 32px;
+		}
+	}
+
+	.section__subtitle {
+		text-align: center;
+		padding: 0 15%;
+		margin-bottom: 40px;
+		@media (max-width: @screen-xs-max) {
+			padding: 0;
+		}
+	}
+
+	/*** . Section: Info ***/
+
+	@section-info-height: 45px;
+
+	.section__info {
+		height: @section-info-height;
+		border-bottom: 1px solid rgba(215, 215, 215, 0.5);
+		.section_info__body {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 10px;
+			.info__column-left {
+				.section_info__contact {
+					display: inline-block;
+					margin-right: 40px;
+					> p {
+						font-size: (@font-size-base - 2px);
+						> i {
+							color: @brand-accent;
+						}
+					}
+					@media (max-width: @screen-sm-max) {
+						margin-right: 20px;
+					}
+				}
+			}
+			.info__column-right {
+				.social__icons {
+			 		padding: 0;
+			 		list-style: none;
+			 		float: left;
+			 		margin-top: 2px;
+			 		margin-bottom: 0;
+			 		.social-icons__item {
+			 			display: inline-block;
+						font-size: (@font-size-base + 2px);
+			      		padding-right: 30px;
+						> a {
+							display: block;
+				          	text-decoration: none;
+				          	color: @brand-primary;
+				          	transition: color 0.3s;
+				          	&:hover {
+				      			color: @brand-accent;
+				      		}
+						}
+			 		}
+			 	}
+				.search-form {
+					display: inline-block;
+					position: relative;
+					margin: 0;
+					> .form-group {
+						display: inline-block;
+						> .form-control {
+							box-shadow: none;
+							height: 26px;
+							font-size: (@font-size-base - 2px);
+						}
+					}
+				}
+				.lang-menu {
+					margin-right: 20px;
+					margin-top: 2px;
+					float: left;
+				}
+			}
+		}
+	}
+
+	/*** . Section: Home ***/
+
+	@header-height: @navbar-height + @section-info-height;
+
+	.section__home {
+		height: calc(~"70vh - "@header-height);
+	    width: 100%;
+	    padding: 0;
+	    position: relative;
+	    &:before {
+	        content: "";
+	        position: absolute;
+	        top: 0; right: 0; bottom: 0; left: 0;
+	        background-color: fade(black, 40%);
+	    }
+	    @media (max-width: @screen-xs-max) {
+	        height: calc(~"100vh - "@header-height);
+	    }
+	    .container {
+	    	height: 100%;
+			.row {
+				display: table;
+				width: 100%;
+				height: 100%;
+				[class*="col-"] {
+					display: table-cell;
+					float: none;
+					vertical-align: middle;
+				}
+			}	
+		}
+	    .welcome__content {
+			text-align: left;
+	    	color: white;
+	    	.welcome_content__title {
+	    		font-size: 60px;
+	    		font-weight: 700;
+	    		@media (max-width: @screen-xs-max) {
+			        font-size: 42px;
+			    }
+	    	}
+	    	.welcome_content__desc {
+	    		padding: 30px 0;
+	    		font-weight: 700;
+	    		font-size: (@font-size-base + 4px);
+	    		@media (max-width: @screen-xs-max) {
+			        font-size: @font-size-base;
+			    }
+	    	}
+	    }
+		.home__bg {
+			position: absolute;
+	    	top: 0; right: 0; bottom: 0; left: 0;
+	    	background: url("../img/office-2.jpg") no-repeat center center / cover;
+	    	z-index: -999;
+		}
+	}
+
+	/*** . Section: Reservation ***/
+
+	.section__reservation {
+		background: rgb(250, 250, 250);
+		.reservation__form-body {
+			background: rgb(255, 255, 255);
+			border: 1px solid rgba(215, 215, 215, 0.5);
+			padding: 40px;
+			margin: 50px 0;
+			@media (max-width: @screen-sm-max) {
+				padding: 25px;
+			}
+			@media (max-width: @screen-xs-max) {
+				padding: 15px;
+			}
+			.subheading {
+				color: @brand-accent;
+				letter-spacing: 6px;
+				text-transform: uppercase;
+				margin-left: 15px;
+				font-size: (@font-size-base - 2px);
+			}
+			.section__heading {
+				font-weight: 700;
+				color: @brand-primary;
+			}
+			.subheading, .section__heading, .section__subheading {
+				margin-left: 15px;
+			}
+			.reservation__form {
+				display: inline-block;
+				.form-group {
+					.form-control {
+						box-shadow: none;
+						font-size: (@font-size-base - 2px);
+					}
+				}
+				.conditions {
+					color: @brand-accent;
+				}
+			}
+		}
+		.booking__details-body {
+			background: rgb(255, 255, 255);
+			border: 1px solid rgba(215, 215, 215, 0.5);
+			padding: 40px;
+			margin: 50px 0 30px 0;
+			@media (max-width: @screen-sm-max) {
+				padding: 25px;
+			}
+			@media (max-width: @screen-xs-max) {
+				padding: 15px;
+			}
+			.subheading {
+				color: @brand-accent;
+				letter-spacing: 6px;
+				text-transform: uppercase;
+				font-size: (@font-size-base - 2px);
+			}
+			.section__heading {
+				margin-bottom: 20px;
+				color: @brand-primary;
+				font-weight: 700;
+			}
+			.room__details {
+				figcaption {
+					> h3 {
+						display: inline-block;
+						color: @brand-primary;
+						font-weight: 700;
+						margin: 5px 0;
+						@media (max-width: @screen-md-max) {
+							font-size: (@font-size-base + 6px);
+						}
+						@media (max-width: @screen-sm-max) {
+							font-size: (@font-size-base + 6px);
+						}
+					}
+					.room__price {
+						display: inline-block;
+						float: right;
+						margin-top: 5px;
+						font-size: (@font-size-base + 8px);
+						font-weight: 700;
+						color: @brand-accent;
+						@media (max-width: @screen-md-max) {
+							font-size: (@font-size-base + 6px);
+						}
+						@media (max-width: @screen-sm-max) {
+							font-size: (@font-size-base + 6px);
+						}
+						> small {
+							font-size: @font-size-base;
+							@media (max-width: @screen-md-max) {
+								font-size: (@font-size-base - 2px);
+							}
+							@media (max-width: @screen-sm-max) {
+								font-size: (@font-size-base - 2px);
+							}
+						}
+					}
+					.desc_spacer {
+						padding: 50px 0 0 0;
+						.room__desc {
+							margin-top: 10px;
+						}
+					}
+				}
+			}
+			.details-info {
+				list-style: none;
+				display: inline-block;
+				padding-left: 0;
+				margin-bottom: 0;
+				> li {
+					width: 50%;
+					float: left;
+					padding: 5px 0;
+					border-top: 1px solid #e1e1e1;
+					> label {
+						font-size: (@font-size-base - 2px);
+						text-transform: uppercase;
+					}
+				}
+				> .total-price {
+					width: 100%;
+					> p {
+						font-size: (@font-size-base + 8px);
+						font-weight: 700;
+						color: @brand-accent;
+					}
+				}
+			}
+		}
+		.info__body {
+			padding: 40px;
+			margin: 30px 0;
+			background-color: rgb(255, 255, 255);
+			border: 1px solid rgba(215, 215, 215, 0.5);
+			@media (max-width: @screen-sm-max) {
+		        padding: 25px;
+		    }
+			@media (max-width: @screen-xs-max) {
+				padding: 15px;
+			}
+			.info__title {
+				color: @brand-accent;
+				letter-spacing: 6px;
+				text-transform: uppercase;
+				font-size: (@font-size-base - 2px);
+			}
+			.info__content {
+				list-style-type: none;
+	    		padding-left: 0;
+	    		> li {
+	    			padding: 10px 0;
+	    			> i {
+	    				float: left;
+	    				margin-top: -8px;
+	    				font-size: 40px;
+	    				color: @brand-accent;
+	    				@media (max-width: @screen-sm-max) {
+					        margin-top: -5px;
+	    					font-size: 36px;
+					    }
+	    				@media (max-width: @screen-xs-max) {
+							font-size: 32px;
+							margin-top: -4px;
+						}
+	    			}
+					.info-content {
+		    			overflow: hidden;
+		    			margin-left: 50px;
+		    			.title {
+		    				font-weight: 600;
+		    				margin-bottom: 0;
+		    				font-size: @font-size-base;
+		    				text-transform: uppercase;
+		    			}
+		    			@media (max-width: @screen-md-max) {
+					        margin-left: 50px;
+					    }
+		    			@media (max-width: @screen-sm-max) {
+					        margin-left: 45px;
+					    }
+		    			@media (max-width: @screen-xs-max) {
+							margin-left: 45px;
+							.title {
+			    				font-weight: 700;
+			    				margin-bottom: 0;
+			    				font-size: (@font-size-base - 1px);
+			    				text-transform: uppercase;
+			    			}
+			    			.description {
+								font-size: (@font-size-base - 1px);
+			    			}
+						}
+		    		}
+	    		}
+			}
+		}
+	}
+}

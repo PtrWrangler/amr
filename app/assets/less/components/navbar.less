@@ -1,0 +1,99 @@
+/**
+ * Navbar
+ */
+
+@navbar-height: 90px;
+@navbar-margin-bottom: 0;
+
+/*** Navbar: Default ***/
+
+@navbar-default-link-color: @brand-primary;
+@navbar-default-link-hover-color: @brand-accent;
+@navbar-default-link-active-color: @brand-accent;
+@navbar-default-bg: white;
+@navbar-default-link-hover-bg: transparent;
+@navbar-default-link-active-bg: transparent;
+@navbar-default-brand-color: @brand-primary;
+@navbar-default-brand-hover-color: @brand-primary;
+
+/*** Navbar: Collapse ***/
+
+@navbar-collapse-max-height: 70vh;
+@navbar-default-toggle-hover-bg: transparent;
+@navbar-default-toggle-icon-bar-bg: @brand-primary;
+@navbar-default-toggle-border-color: transparent;
+
+.navbar {
+	border-radius: 0;
+	border: 0;
+	box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.2);
+	.navbar-header {
+		.navbar-brand {
+			padding: 0;
+			text-align: center;
+			.navbar-brand__logo {
+				font-weight: 700;
+				font-size: 32px;
+				@media (max-width: @screen-sm-max) {
+					margin-left: 15px;
+				}
+				@media (max-width: @screen-xs-max) {
+					font-size: 20px;
+					margin-left: 15px;
+					margin-top: 30px;
+				}
+			}
+			.navbar-brand__sublogo {
+				text-transform: uppercase;
+				color: @brand-accent;
+				font-size: (@font-size-base - 3px);
+				letter-spacing: 6px;
+				margin-top: -10px;
+				@media (max-width: @screen-xs-max) {
+					font-size: (@font-size-base - 6px);
+					margin-left: 15px;
+				}
+			}
+		}
+		@media (min-width: @screen-sm-max) {
+			position: absolute; 
+			top: 0; left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.navbar-nav {
+		> li {
+            > a {
+            	font-size: (@font-size-base);
+                text-transform: uppercase;
+                transition: color .3s;
+                letter-spacing: 1px;
+            }
+        }
+	}
+	@media (min-width: @grid-float-breakpoint) {
+		.navbar-left { 
+			&:first-child { 
+				margin-left: -@navbar-padding-horizontal * 2; 
+			}
+		}
+	}
+}
+
+/* Sticky */ 
+
+.navbar-sticky { 
+	position: fixed; 
+	top: 0; left: 0; right: 0; 
+	z-index: 999;
+
+	+ .section__home {
+		margin-top: @navbar-height;
+	}
+}
+
+.navbar-toggle {
+    .icon-bar {
+        transition: background-color .2s;
+    }
+}

@@ -1,0 +1,148 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "lol";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, "test2");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+// get rooms infos
+$sql = "SELECT RoomName, imageURL, RoomPrice, RoomDesc, RoomFeatures FROM rooms";
+$result = $conn->query($sql);
+
+$rooms = array();
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $rooms[] = $row;
+    }
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+
+?>
+<!DOCTYPE html>
+@@include('./head.html')
+
+  <body id="rooms-2__page">
+		
+    <!-- Info Section
+    ================================================== -->
+    <div class="section__info">
+      @@include('./top.html')
+
+    <!-- CONTENT
+      ================================================== -->
+
+    <!-- section home -->
+    <section class="section__home" id="section__home">
+    	<div class="container">
+    		<div class="row">
+  	    	<div class="col-sm-12">
+  	    		<div class="welcome__content">
+							<h1 class="welcome_content__title"></h1>
+	  					<p class="welcome_content__desc">ZZZ...</p>
+		  			</div> <!-- .welcome__content -->
+    	    </div>
+	    	</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+			<div class="home__bg"></div>
+    </section> <!-- / .section__home -->
+
+    <!-- section rooms-1 -->
+    <section class="section__rooms-2">
+    	<div class="container">
+    		<div class="row">
+			<h2 class="section__title"><strong>Nos Chambres</strong></h2>
+    				<div class="divider">
+    					<hr class="line1">
+    					<hr class="line2">
+    					<hr class="line1">
+    				</div> <!-- / .divider -->
+					<p class="section__subtitle">Prix<br />HAUTE SAISON - BASSE SAISON <br /><br />(Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande de marché)</p>
+          
+		  <?php
+		  foreach ($rooms as &$room) {
+			  echo "
+		  <div class=\"col-md-4 col-sm-6\"> 
+		  
+            <div class=\"rooms__item\">
+              <div class=\"rooms__pic\">
+                <img src=\"" . $room['imageURL'] . "\" class=\"img-responsive\" alt=\"chambre-201\">
+              </div> <!-- / .about__pic -->
+              <div class=\"rooms__desc\">
+                <div class=\"rooms_desc__header\">
+                  <h2 class=\"rooms_desc__title\">" . $room['RoomName'] . "</h2><br />
+                  <p class=\"rooms_desc__price\"><span>" . $room['RoomPrice'] . "</span> / soir</p>
+                </div> <!-- .rooms_desc__header -->
+                <div class=\"desc_spacer\"> 
+<p class=\"rooms_desc__desc\">&emsp;" . $room['RoomDesc'] . "</p>
+                  </div>
+<ul class=\"rooms_desc__services\">" . $room['RoomFeatures'] . "
+                  </ul> <!-- .rooms_desc__services -->
+                <a href=\"reservation.html\" class=\"btn btn-rooms\">Renseigner</a>
+              </div> <!-- / .rooms__desc -->
+            </div> <!-- .rooms__item -->
+          </div>";
+		  }
+		  
+		  ?>
+		  
+        </div> <!-- .row -->
+        <!-- <div class="row">
+          <div class="col-sm-12">
+        
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li>
+                  <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>
+                  <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        
+          </div>
+        </div> <!-- / .row -->
+	    </div> <!-- / .container -->
+    </section> <!-- / .section__rooms-1 -->
+
+		<!-- section footer -->
+    @@include('./footer.html')
+
+    <!-- 
+    ================================================== -->
+
+    <!-- JS Global -->
+    <script src="assets/plugins/jquery/jquery-1.12.4.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- JS Plugins -->
+		<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+		<script src="assets/plugins/lightbox/dist/js/lightbox.min.js"></script>
+		<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+		<script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+    <!-- JS Custom -->
+    <!--build:js assets/js/theme.min.js -->
+    <script src="assets/js/theme.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

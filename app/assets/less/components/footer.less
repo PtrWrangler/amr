@@ -1,0 +1,117 @@
+/**
+ * Footer
+ */
+
+.section__footer {
+	color: rgb(255, 255, 255);
+	background-color: rgb(30, 37, 41);
+	.footer__body {
+		margin-top: 70px;
+		margin-bottom: 30px;
+		@media (max-width: @screen-xs-max) {
+			margin: 0;
+		}
+		.footer__item {
+			@media (max-width: @screen-xs-max) {
+				margin: 30px 0;
+			}
+			.footer__links {
+		 		list-style: none;
+		 		padding: 0;
+		 		> li {
+		 			margin: 15px 0;
+		 			> a {
+		 				color: rgb(255, 255, 255);
+						transition: all 0.3s;
+						text-decoration: none;
+						text-transform: uppercase;
+						font-size: (@font-size-base - 2px);
+						&:hover {
+							margin-left: 8px;
+						}
+						&:hover, &:focus, &:active {
+							color: @brand-accent;
+						}
+		 			}
+		 		}
+		 	}
+		 	.brand__logo {
+		 		font-size: 42px;
+		 		font-weight: 700;
+				text-align: center;
+				margin-top: 0;
+				@media (max-width: @screen-sm-max) {
+					margin-top: 10px;
+					font-size: 32px;
+				}
+				@media (max-width: @screen-xs-max) {
+					font-size: 32px;
+				}
+		 	}
+		 	.brand__sublogo {
+				text-align: center;
+				text-transform: uppercase;
+				color: @brand-accent;
+				font-size: @font-size-base;
+				letter-spacing: 10px;
+				margin-top: -5px;
+				@media (max-width: @screen-sm-max) {
+					font-size: (@font-size-base - 2px);
+				}
+				@media (max-width: @screen-xs-max) {
+					font-size: (@font-size-base - 2px);
+					letter-spacing: 6px;
+				}
+		 	}
+		 	.social__icons {
+		 		text-align: center;
+				margin-top: 40px;
+				padding: 0;
+		 		.social-icons__item {
+					display: inline-block;
+		      		padding: 0 25px;
+					> a {
+						display: block;
+						font-size: (@font-size-base + 4px);
+			          	text-decoration: none;
+			          	color: rgb(255, 255, 255);
+			          	transition: color 0.3s;
+			          	&:hover {
+			      			color: @brand-accent;
+			      		}
+			      		@media (max-width: @screen-xs-max) {
+							font-size: (@font-size-base + 2px);
+						}
+					}
+		 		}
+		 	}
+		 	.newsletter__title {
+		 		font-family: @font-family-base;
+		 		color: @brand-accent;
+		 		letter-spacing: 8px;
+		 		text-transform: uppercase;
+		 		font-size: @font-size-base;
+		 	}
+		 	.newsletter__form {
+				margin-top: 20px;
+				position: relative;
+				> .form-group {
+					> .form-control {
+						box-shadow: none;
+						height: 32px;
+						font-size: (@font-size-base - 2px);
+					}
+				}
+			}
+		}
+	}
+	.footer__copyright {
+		margin-bottom: 10px;
+		.footer_copyright__text {
+			font-family: 'Playfair Display', serif;
+			font-size: (@font-size-base - 2px);
+			letter-spacing: 1px;
+		}
+	}
+
+}

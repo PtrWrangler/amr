@@ -1,0 +1,74 @@
+/**
+ * Dropdowns
+ */
+
+
+@dropdown-link-hover-bg: transparent;
+@dropdown-link-color: @brand-primary;
+@dropdown-link-hover-color: @brand-accent;
+
+
+.dropdown {
+	.dropdown-toggle {
+		background-color: transparent;
+		border: none;
+		text-transform: uppercase;
+		font-size: (@font-size-base - 2px);
+	}
+	.dropdown-menu {
+		min-width: 50px;
+		> li {
+			margin: 10px 0;
+			> a {
+				font-size: (@font-size-base - 2px);
+				text-transform: uppercase;
+				transition: color 0.3s;
+				
+			}
+		}
+	}
+}
+
+.dropdown.lang-menu {
+	display: inline-block;
+	.dropdown-toggle {
+		transition: color 0.3s;
+		&:hover, &:active, &:focus {
+			color: @brand-accent;
+		}
+	}
+}
+
+.reservation-dropdown {
+	color: rgb(255, 255, 255);
+	.dropdown-toggle {
+		margin-left: -6px;
+		background-color: transparent;
+		border: none;
+		font-size: 26px;
+		font-family: @headings-font-family;
+		text-transform: none;
+		@media (max-width: @screen-md-max) {
+			font-size: 32px;
+		}
+		@media (max-width: @screen-sm-max) {
+			font-size: 32px;
+		}
+		@media (max-width: @screen-xs-max) {
+			font-size: 24px;
+		}
+		> i {
+			font-size: (@font-size-base + 2px);
+		}
+	}
+	.dropdown-menu {
+		min-width: 260px;
+		> li {
+			margin: 10px 0;
+			> a {
+				font-size: @font-size-base;
+				letter-spacing: 0.02em;
+			}
+		}
+	}
+}

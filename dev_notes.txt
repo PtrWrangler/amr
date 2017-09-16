@@ -1,0 +1,20 @@
+Notes for future additions:
+- Addition of rooms:
+	the room image must be the exact same size as the other room images in assets/img/rooms-sized/
+	
+
+Multilanguage Language notes
+<html lang="es">
+
+
+links that search engines like
+<link rel="alternate" href="example.com" hreflang="en-uk" />
+<link rel="alternate" href="example.com/us/" hreflang="en-us" />
+<link rel="alternate" href="example.com/au/" hreflang="en-au" />
+
+
+
+.htaccess to set a different location for index.html
+	#Alternate default index page
+	DirectoryIndex ./fr/index.html (optional fallback indexes)
+	

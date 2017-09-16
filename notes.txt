@@ -1,0 +1,64 @@
+Notes/Questions for email to gerry:
+
+Main page:
+- For the section choosing dates and specifying amount of persons to contact reservation about, I imagine once you click on the button "contactez nous pour connaitre les disponibilite" it will take the info that was enetered in here and bring you to the contact form and prefill in that info for you to finish the form.
+
+- For the "nos meilleur chambres" section let me know what specific rooms you would like there, I just put 4 nice looking ones for now.
+
+- For the section with the 4 headers atop the little stars with the blurb underneath. Let me know what you would like there. Again just provide me with the content and I will put.
+
+- for the our gellery section if you want to provide me with any random pictures of stuff I can put them there 
+	or I could just take that section out.
+
+- for the testimonials section there are 3 options
+	1) You have reviews from past clients or current clients that you could put there.
+	2) You want to invent some nice reviews and I can put them there for you.
+	3) we remove the testimonials section altogether.
+
+- for the news and events section I can use a web api that will automatically/periodically load 
+	local news and events articles for you once I start doing the functionality.
+	
+	
+Historique page:
+- Let me know what you think about the first section pictures and history
+
+- For the statistics section underneath, let me know what stats you would want there if any.
+
+- For the services section let me know what to put as services offered.
+The youtube video can be made to be a fancy popup youtube video if you want, i know how todo that.
+
+- The Testimonials section will be the same as what you chose on the main page.
+
+
+Chambres page:
+- You can give me specific details/features about each room so I can put accurate details
+
+- When a Renseigner button is pressed I imagine it leading to the reservation page with the chambre's info already populated in the page.
+
+
+Gallery Page:
+- For the Gallery page et me know if you like it or maybe I could make this page a blog instead but you would have to update it. If you have any other ideas for this page let me know.
+
+
+Contact page:
+
+
+
+Other notes/questions to Gerry:
+- Make sure all emails and phone numbers are correct
+- Wherever there is "Lorem ipsum dolor..." writing, this is where i need you to think of sometrhing to put there or just take it out.
+
+
+What is left todo:
+- All functionality, transferring information from one page to another, sending contact emails.
+- Ideas/changes requested by Gerry
+- Translations, translation functionality
+- POLITIQUE DE CONFIDENTIALITÉ, TERMES ET CONDITIONS, PLAN DU SITE (links in the footer)
+- links for twitter, facebook... ?
+- captcha key
+
+
+
+
+
+

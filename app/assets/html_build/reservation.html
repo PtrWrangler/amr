@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+@@include('./head.html')
+
+  <body id="reservation__page">
+		
+		<!-- Info Section
+    ================================================== -->
+		<div class="section__info">
+			@@include('./top.html')
+
+    <!-- CONTENT
+      ================================================== -->
+
+    <!-- section home -->
+    <section class="section__home">
+    	<div class="container">
+    	  <div class="row">
+    	    <div class="col-sm-12">
+    	    	<div class="welcome__content">
+							<h1 class="welcome_content__title">Réservation</h1>
+    					<p class="welcome_content__desc">Contactez-nous pour les réservations</p>
+    				</div> <!-- .welcome__content -->
+    	    </div>
+    	  </div> <!-- / .row -->
+    	</div> <!-- / .container -->
+			<div class="home__bg"></div>
+    </section> <!-- / .section home -->
+
+    <!-- section reservation -->
+    <section class="section__reservation">
+    	<div class="container">
+    	  <div class="row">
+    	    <div class="col-sm-5 col-sm-push-7 col-md-4 col-md-push-8">
+    	    	<div class="booking__details-body">
+    	    		<p class="subheading">Détails de réservation</p>
+    	    		<h2 id="is_room_selected" class="section__heading">Aucune chambre sélectionnée</h2>
+    	    		<figure class="room__details">
+								<img src="http://placehold.it/1024x768" id="res_img" class="img-responsive" alt="...">
+								<figcaption>
+									<h3 id="res_room">Chambre</h3>
+									<div id="res_price" class="room__price">
+										$0 <small>/ soir</small>
+									</div>
+									<div class="desc_spacer"> 
+										<p id="res_desc" class="room__desc"></p>
+									</div>
+								</figcaption>
+							</figure> <!-- / .room__details -->
+							<ul class="details-info">
+                <li>
+                  <label>Arriver</label>
+                  <p id="checkin">2017-04-09</p>
+                </li>
+                <li>
+                  <label>Quitter</label>
+                  <p id="checkout">2017-04-18</p>
+                </li>
+                <li>
+                  <label>Adultes</label>
+                  <p id="adults">1</p>
+                </li>
+                <li>
+                  <label>Enfants</label>
+                  <p id="children">0</p>
+                </li>
+                <li>
+                  <label>Nuit(s)</label>
+                  <p id="stay">#</p>
+                </li>
+            </ul>
+  	    		</div> <!-- .booking__details-body -->
+  	    		<div class="info__body">
+							<p class="info__title">Information</p>
+							<ul class="info__content">
+                <li>
+                  <p class="info-text">Si vous avez des questions avec la réservation, contactez-nous.</p>
+                </li>
+	              <li>
+	                <i class="icon ion-android-pin"></i>
+	                <div class="info-content">
+	                  <div class="title">Addresse</div>
+	                  <div class="description">1365 Boulevard René-Lévesque Ouest, Québec, Canada, G1S-1W9</div>
+	                </div>
+	              </li>
+	              <li>
+	                <i class="icon ion-android-call"></i>
+	                <div class="info-content">
+	                  <div class="title">Téléphone / Téléc</div>
+	                  <div class="description">1 (418) 527-3907 /<br />  1 (418) 369-8255</div>
+	                </div>
+	              </li>
+	              <li>
+	                <i class="icon ion-android-mail"></i>
+	                <div class="info-content">
+	                  <div class="title">E-mail</div>
+	                  
+	                </div>
+					<div class="description">AubergeHotelVillaRoyale@gmail.com</div>
+	              </li>
+	            </ul> <!-- .info__content -->
+  	    		</div> <!-- / .info__body -->
+    	    </div>
+    	    <div class="col-sm-7 col-sm-pull-5 col-md-8 col-md-pull-4">
+    	    	<div class="reservation__form-body">
+    	    		<p class="subheading">Formulaire de reservation</p>
+    	    		<h2 class="section__heading">Informations personnelles</h2>
+    	    		<p class="section__subheading">Veuillez nous envoyer plus d'informations pour votre demande de réservation.</p>
+
+							<!-- Alert message -->
+              <div class="alert" id="form_reservation" role="alert"></div>
+
+              <!-- Please carefully read the README.pdf file in order to setup the PHP reservation form properly -->
+
+              <form id="reservation-form_sendemail" class="reservation__form" data-animate-in="animateUp">
+              	<div class="col-sm-12 col-md-6">
+              		<div class="form-group">
+	                  <label for="check-in" class="sr-only">Date d'arrivée</label>
+	                  <input type="date" name="check-in" class="form-control" id="select_checkin" value="2017-04-09">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              <div class="col-sm-12 col-md-6">
+	              	<div class="form-group">
+	                  <label for="check-out" class="sr-only">Date de départ</label>
+	                  <input type="date" name="check-out" class="form-control" id="select_checkout" value="2017-04-18">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              <div class="col-sm-12 col-md-6">
+	              	<div class="form-group">
+	                  <label for="form-adults" class="sr-only">Adultes</label>
+	                  <input type="number" name="num_adults" class="form-control" id="num_adults" placeholder="Adultes">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              <div class="col-sm-12 col-md-6">
+	              	<div class="form-group">
+	                  <label for="form-children" class="sr-only">Enfants</label>
+                      <input type="number" name="num_children" class="form-control" id="num_children" placeholder="Enfants">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+              	<div class="col-sm-12 col-md-6">
+              		<div class="form-group">
+	                  <label for="first-name" class="sr-only">Prénom</label>
+	                  <input type="text" name="first-name" class="form-control" id="first-name" placeholder="Prénom">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              <div class="col-sm-12 col-md-6">
+              		<div class="form-group">
+	                  <label for="last-name" class="sr-only">Nom de famille</label>
+	                  <input type="text" name="last-name" class="form-control" id="last-name" placeholder="Nom de famille">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              <div class="col-sm-12 col-md-6">
+	                <div class="form-group">
+	                  <label for="email" class="sr-only">Email</label>
+	                  <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              <div class="col-sm-12 col-md-6">
+	                <div class="form-group">
+	                  <label for="phone" class="sr-only">Tel</label>
+	                  <input type="tel" name="phone" class="form-control" id="phone" placeholder="Tel">
+	                  <span class="help-block"></span>
+	                </div>
+	              </div>
+	              
+              	<div class="col-sm-12">
+	                <div class="form-group">
+	                  <label for="requirements" class="sr-only">Besoins spéciaux</label>
+	                  <textarea name="requirements" class="form-control" rows="8" id="requirements" placeholder="Besoins spéciaux"></textarea>
+	                  <span class="help-block"></span>
+	                </div>
+              	</div>
+               	<div class="col-sm-12">
+               		<p>
+               			<input type="checkbox" name="checkbox"> J'ai lu et accepté <a href="#" class="conditions">les termes et conditions.</a>
+               		</p>
+               		<button type="submit" class="btn btn-booking">Demande de réservation par email</button>
+               	</div>
+              </form> <!-- .reservation__form -->
+            </div> <!-- .reservation__form-body -->
+          </div>
+    	  </div> <!-- / .row -->
+    	</div> <!-- / .container -->
+    </section> <!-- / .section reservation -->
+
+		<!-- section footer -->
+    @@include('./footer.html')
+
+    <!-- 
+    ================================================== -->
+
+    <!-- JS Global -->
+    <script src="assets/plugins/jquery/jquery-1.12.4.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/moment-develop/min/moment-with-locales.min.js"></script>
+
+    <!-- JS Plugins -->
+		<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+
+    <!-- JS Custom -->
+    <!--build:js assets/js/theme.min.js -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/prefill_reservation.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

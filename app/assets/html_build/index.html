@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+@@include('./head.html')
+
+  <body id="index__page">
+		
+		<!-- Info Section
+    ================================================== -->
+		<div class="section__info">
+			
+			@@include('./top.html')
+
+    <!-- CONTENT
+      ================================================== -->
+
+    <!-- section home -->
+    <section class="section__home" id="section__home">
+    	<div class="container">
+    		<div class="row">
+  	    	<div class="col-sm-12">
+  	    		<div class="welcome__content">
+							<h1 class="welcome_content__title">Maison Roy</h1>
+							<p class="welcome_content__title-primary">Auberge</p>
+	  					<p class="welcome_content__desc">Vous êtes chez-nous chez-vous!</p>
+	  					<a href="#section__about" class="btn btn-reservation">Explorer</a>
+		  			</div> <!-- .welcome__content -->
+    	    </div>
+	    	</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+      <div class="home-parallax__bg" style="transform: translateY(0px);"></div>
+    </section> <!-- / .section__home -->
+
+    <!-- section availability -->
+	<section class="section__availability"> 
+		<div class="container"> 
+			<div class="row"> 
+				<div class="col-sm-12"> 
+
+					<!-- Reservation form --> 
+					<form class="reservation__form"> 
+						<input type="hidden" id="arrival" value="">
+						<input type="hidden" id="departure" value="">
+						<input type="hidden" id="adults" value="">
+						<input type="hidden" id="children" value="">
+	
+						<div class="form-group">
+							<div class="form-group__inner"> 
+								<label for="reservation__check-in" class="index_dater">Date D'Arrivée</label>
+								<input type="text" class="form-control date" id="reservation__check-in" value="24 December 2017"> 
+							</div> <!-- / .form-group__inner --> 
+						</div> <!-- / .form-group --> 
+						<div class="form-group"> 
+							<div class="form-group__inner"> 
+								<label for="reservation__check-out" class="index_dater">Date De Départ</label>
+								<input type="text" class="form-control date" id="reservation__check-out" value="12 January 2018">
+							</div> <!-- / .form-group__inner --> 
+						</div> <!-- / .form-group --> 
+						<div class="form-group"> 
+							<div class="form-group__inner"> 
+								<label for="reservation__adults" class="index_dater">Adultes</label>
+								<input type="text" id="reservation__adults">
+								<div class="dropdown reservation-dropdown">
+								  <button class="dropdown-toggle" type="button" id="adults-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    <span id="num_adults">1</span>
+								    <i class="icon ion-chevron-down"></i>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="adults-dropdown">
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								  </ul>
+								</div> <!-- . -->
+							</div> <!-- / .form-group__inner --> 
+						</div> <!-- / .form-group --> 
+						<div class="form-group"> 
+							<div class="form-group__inner">
+								<label for="reservation__children" class="index_dater">Enfants</label>
+								<input type="text" id="reservation__children">
+								<div class="dropdown reservation-dropdown">
+								  <button class="dropdown-toggle" type="button" id="children-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								    <span id="num_children">0</span>
+								    <i class="icon ion-chevron-down"></i>
+								  </button>
+								  <ul class="dropdown-menu" aria-labelledby="children-dropdown">
+								    <li><a href="#">0</a></li>
+								    <li><a href="#">1</a></li>
+								    <li><a href="#">2</a></li>
+								    <li><a href="#">3</a></li>
+								  </ul>
+								</div> <!-- . -->
+							</div> <!-- / .form-group__inner --> 
+						</div> <!-- / .form-group -->  
+					</form> <!-- / .reservation__form --> 
+
+				</div> 
+			</div> <!-- / .row -->
+			<div class="row"> 
+				<div class="col-xs-12">
+
+					<!-- Reservation button --> 
+					<div class="reservation__button">
+						<button type="submit" id="date_submit" class="btn btn-reservation">Contactez-nous pour connaître la disponibilité</button>
+					</div> <!-- / .reservation__button -->  
+					
+				</div> 
+			</div> <!-- / .row -->  
+		</div> <!-- / .container --> 
+	</section> <!-- .section__availability -->
+	   
+	<!-- section about -->
+    <section class="section__about" id="section__about">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm-12"> 		  	
+    				<h2 class="section__title">Bienvenue à<br /><strong>L'Auberge Maison Roy</strong></h2>
+    				<div class="divider">
+    					<hr class="line1">
+    					<hr class="line2">
+    					<hr class="line1">
+    				</div> <!-- / .divider -->
+    			</div>
+    		</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+    	<div class="container-fluid">
+    		<div class="row">
+		    	<div class="section_about__content">
+		    	  <div class="col-md-6">
+		    	  	<div class="about__pic">
+		    				<img src="assets/img/quebec_night.jpg" class="img-responsive" alt="...">
+		    			</div> <!-- / .about__pic -->
+		    	  </div>
+		    	  <div class="col-md-6">
+			    	  <div class="about__desc">
+			    	  	<p class="about_desc__subtitle">À propos de nous:</p>
+			  				<h3 class="about_desc__title">Au coeur de la ville de Québec!</h3>
+								<p class="about_desc__desc">L’Auberge Maison Roy est l’endroit tout indiqué pour votre séjour dans la vieille Capitale. À deux pas du parc des Bois-de-Coulonge, vous pourrez profiter de votre promenade jusqu’aux Plaines D’Abraham et découvrir l’histoire du champs de bataille et commencer votre excursion dans le Vieux Québec par la terrasse Dufferin surplombée du Château Frontenac.</p>
+								<h4 class="about_desc__quote">Très Cher aimable et respectueuse clientèles, en vous souhaitent la bienvenue future dans notre établissement, nous aimerions vous faire comprendre d’avance que nous sommes un petit établissement de 15 chambres. 11 en chambre d’Hôtel avec salle de bain complète (aucune baignoire juste des douches) et 4 chambres en style dortoir avec douche et toilette commune pour petit budget. (Cuisine disponible)<br /><br />
+								Les chambres en dortoir visent une clientèle, bien avertis de ce genre d’accommodation quelques peut spartiate, idéal pour jeune et moins jeune qui parcourt le monde et ne souhaite qu’un lit pour dormir au plus bas prix possible.  Nos lits en dortoir sont donc à 40$ Can en haute saison et 25$ en basse saison. </h4>
+								<p class="about_desc__desc">Nous vous proposons les chambres suivantes :<br /><br />
+								1-	Une chambre no 205  supérieure de luxe avec 1 grand lit King size  <br />
+2-	Deux chambre avec lit Queen size supérieur No 216 et 217  à 119.95 en haute saison et 89.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande de marché)<br />
+3-	Deux chambres avec lit double supérieur 210 et 214  à 109.95 en haute saison et 79.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande du marché)<br />
+4-	 Deux Chambre avec un lit double standard 215 et 211  dimension européenne peut sembler étroit pour personne sensible à 99.95 en haute saison et 59.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande du marché)<br />
+5-	Une Chambre  No 209 avec deux lits simples à 109.95 en haute saison et 79.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande du marché)<br />
+6-	Une chambre No 212 de luxe avec balcon à 109.95 en haute saison et 79.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande du marché)<br />
+7-	Une chambre no 201 Avec deux lits double pouvant accueillir 4 adultes situés dans un semi-sous-sol à 109.95 en haute saison et 79.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande du marché)<br />
+8-	Une chambre no 206 Familiale Avec cuisinette, un lit Queen et un divan lit deux places, situées dans un semi-sous-sol à 129.95 en haute saison et 89.95 en basse saison. (Les prix en haute saison peuvent fluctuer en juillet et août selon les disponibilités et la demande du marché)<br />
+9-	Nos quatre chambres style dortoir sont composé de 4 lit superposés, avec douche et  toilette commune Une cuisine est à votre disposition. Les serviettes ne sont pas fournies. 40$ en haute saison et 25$ Can en basse saison. (pour clientèle averti seulement)<br /><br />
+
+NB : Le petit déjeuner est un buffet continental à 3.00$ par jour et par personne. Encore moins dispendieux qu’un café Tim. 
+
+								</p>
+								<a href="historique.html" class="btn btn-default">Apprendre encore plus</a>
+			  			</div> <!-- / .about__desc -->
+		    	  </div>
+		    	</div> <!-- / .section_about__content -->
+		    </div> <!-- / .row -->
+    	</div>
+	    
+    </section> <!-- / .section__about -->
+		
+		<!-- section best-rooms -->
+    <section class="section__best-rooms">
+    	<div class="container">
+    		<div class="row">
+    		  <div class="col-sm-12"> 		  	
+    				<h2 class="section__title">Nos <strong>Meilleures Chambres</strong></h2>
+    				<div class="divider">
+    					<hr class="line1">
+    					<hr class="line2">
+    					<hr class="line1">
+    				</div> <!-- / .divider -->
+    				<!-- <p class="section__subtitle">Nos Chambres:</p> -->
+    		  </div>
+    		</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+    	<div class="container">
+    		<div class="best-rooms__content">
+		    	<div class="row">
+		    	  <div class="col-sm-6">
+		    	  	<figure class="best-rooms__item">
+	    	  			<img src="assets/img/chambre-205.jpg" class="img-responsive" alt="chambre-205">
+								<figcaption>
+									<h3>Chambre 205</h3>
+									<div class="item__price">
+										$119.95 / $89.95 <small>par nuit</small>
+									</div>
+									<p class="item__desc">Supérieure de luxe avec 1 grand lit King size.<br />Les prix varient selon la saison et le nombre d'occupants.</p>
+									
+								</figcaption>
+							</figure> <!-- / .best-rooms__item -->
+		    	  </div>
+		    	  <div class="col-sm-6">
+		    	  	<figure class="best-rooms__item">
+								<img src="assets/img/chambre-216-tn.jpg" class="img-responsive" alt="chambre-216">
+								<figcaption>
+									<h3>Chambre 216</h3>
+									<div class="item__price">
+										$119.95 / $89.95 <small>par nuit</small>
+									</div>
+									<p class="item__desc">1 lit Queen size.<br /> Les prix varient selon la saison et le nombre d'occupants.</p>
+									
+								</figcaption>
+							</figure> <!-- / .best-rooms__item -->
+		    	  </div>
+		    	</div> <!-- / .row -->
+		    	<div class="row">
+		    	  <div class="col-sm-6">
+		    	  	<figure class="best-rooms__item">
+								<img src="assets/img/chambre-217-tn.jpg" class="img-responsive" alt="chambre-217">
+								<figcaption>
+									<h3>Chambre 217</h3>
+									<div class="item__price">
+										$119.95 / $89.95 <small>par nuit</small>
+									</div>
+									<p class="item__desc">1 lit Queen size.<br /> Les prix varient selon la saison et le nombre d'occupants.</p>
+									
+								</figcaption>
+							</figure> <!-- / .best-rooms__item -->
+		    	  </div>
+		    	  <div class="col-sm-6">
+			    	  <figure class="best-rooms__item">
+								<img src="assets/img/chambre-206-tn.jpg" class="img-responsive" alt="chambre-206">
+								<figcaption>
+									<h3>Chambre 206</h3>
+									<div class="item__price">
+										$129.95 / $89.95 <small>par nuit</small>
+									</div>
+									<p class="item__desc">Studio avec lit Queen size et lit sofa. <br /> Les prix varient selon la saison et le nombre d'occupants.</p>
+									
+								</figcaption>
+							</figure> <!-- / .best-rooms__item -->
+		    	  </div>
+		    	</div> <!-- / .row -->
+		    	<div class="row">
+			    	<div class="col-xs-12">
+			    		<div class="rooms__button">
+			    			<a href="rooms.html" class="btn">Voir toutes les chambres</a>
+			    		</div> <!-- / .rooms__button -->
+			    	</div>
+		    	</div> <!-- / .row -->
+		    </div> <!-- / .best-rooms__content -->
+	    </div> <!-- / .container -->
+    </section> <!-- / .section__best-rooms -->
+
+    <!-- section services -->
+    <section class="section__services">
+    	<div class="container-fluid">
+		    <div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="services__item">
+							<h2 class="services_item__title">Chambres de qualité</h2>
+							<div class="services_item__divider">
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+							</div> <!-- .services_item__divider -->
+							<p class="services_item__desc"></p>
+						</div> <!-- .services__item -->
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="services__item">
+							<h2 class="services_item__title">Ambiance chaleureuse</h2>
+							<div class="services_item__divider">
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+							</div> <!-- .services_item__divider -->
+							<p class="services_item__desc"></p>
+						</div> <!-- .services__item -->
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="services__item">
+							<h2 class="services_item__title">Prix compétitifs</h2>
+							<div class="services_item__divider">
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+							</div> <!-- .services_item__divider -->
+							<p class="services_item__desc"></p>
+						</div> <!-- .services__item -->
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<div class="services__item">
+							<h2 class="services_item__title">Petit déjeuner $3.00</h2>
+							<div class="services_item__divider">
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+								<i class="icon ion-android-star"></i>
+							</div> <!-- .services_item__divider -->
+							<p class="services_item__desc"></p>
+						</div> <!-- .services__item -->
+					</div>
+		    </div> <!-- / .row -->
+	    </div> <!-- / .container -->
+    </section> <!-- / .section__services -->
+
+    <!-- section gallery -->
+    <section class="section__gallery">
+    	<div class="container">
+    		<div class="row">
+    		  <div class="col-sm-12"> 		  	
+    				<h2 class="section__title">Our <strong>Gallery</strong></h2>
+    				<div class="divider">
+    					<hr class="line1">
+    					<hr class="line2">
+    					<hr class="line1">
+    				</div> <!-- / .divider -->
+    				<!-- <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti sit dicta quae natus quasi ratione quis id, tenetur atque blanditiis aperiam mollitia enim corporis ex praesentium reprehenderit.</p> -->
+    		  </div>
+    		</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+    	<div class="container-fluid">
+		    <div class="row">
+		    	<div class="col-xs-12">
+		    		<div id="gallery__carousel" class="owl-carousel owl-theme gallery__body">
+		    			<div class="gallery__item">
+	              <a href="assets/img/exterieur.jpg" data-lightbox="gallery" data-title="Your caption">
+	                <img src="assets/img/exterieur-tn.jpg" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="assets/img/home_bg.jpg" data-lightbox="gallery" data-title="Your caption">
+	                <img src="assets/img/home_bg.jpg" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="assets/img/salle-de-bain.jpg" data-lightbox="gallery" data-title="Your caption">
+	                <img src="assets/img/salle-de-bain-tn.jpg" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+	            <div class="gallery__item">
+	              <a href="http://placehold.it/1920x1280" data-lightbox="gallery" data-title="Your caption">
+	                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+	              </a>
+	            </div> <!-- .gallery__item -->
+		    		</div> <!-- .gallery__body -->
+		    	</div>
+		    </div> <!-- / .row -->
+	    </div> <!-- / .container -->
+    </section> <!-- / .section__gallery -->
+
+    @@include('./testimonials.html')
+
+    <!-- section Events -->
+    <section class="section__events">
+    	<div class="container">
+    		<div class="row">
+    		  <div class="col-sm-12"> 		  	
+    				<h2 class="section__title">Nouvelles Locales <strong>& Événements</strong></h2>
+    				<div class="divider">
+    					<hr class="line1">
+    					<hr class="line2">
+    					<hr class="line1">
+    				</div> <!-- / .divider -->
+    		  </div>
+    		</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-xs-12 hidden-xs col-sm-6 col-md-6 col-lg-3 col-lg-push-9">
+						<div class="news__title">
+							<div>News</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-pull-3">
+						<div class="events__item">
+							<div class="events-item__img">
+                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+              </div>
+              <div class="events-item__body">
+                <div class="events-item__header">
+                	<div class="events-item__date">
+                		<p class="item_date__nbr">15</p>
+                		<p class="item_date__mounth">March</p>
+                	</div> <!-- .events-item__date -->
+                	<div class="events-item__content">
+                		<div class="events-item__title">
+		                  <h3>News post title</h3>
+		                </div>
+		                <div class="events-item__info">
+		                  <ul class="item-info__list">
+		                    <li class="info-list__item"><i class="ion ion-android-person"></i> by John Doe</li>
+		                    <li class="info-list__item"><i class="ion ion-android-chat" aria-hidden="true"></i> 5 Comments</li>
+		                  </ul> <!-- .item-info__list -->
+		                </div> <!-- .events-item__info -->
+                	</div> <!-- .events-item__content -->
+                </div> <!-- .events-item__header -->
+                <div class="events-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
+                </div> <!-- .events-item__text -->
+                <div class="events-item__link">
+                  <a href="index.html">Read More ➔</a>
+                </div> <!-- .events-item__link -->
+              </div> <!-- / .events-item__body -->
+						</div> <!-- .events__item -->
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-pull-3">
+						<div class="events__item">
+							<div class="events-item__img">
+                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+              </div>
+              <div class="events-item__body">
+                <div class="events-item__header">
+                	<div class="events-item__date">
+                		<p class="item_date__nbr">18</p>
+                		<p class="item_date__mounth">March</p>
+                	</div> <!-- .events-item__date -->
+                	<div class="events-item__content">
+                		<div class="events-item__title">
+		                  <h3>News post title</h3>
+		                </div>
+		                <div class="events-item__info">
+		                  <ul class="item-info__list">
+		                    <li class="info-list__item"><i class="ion ion-android-person"></i> by John Doe</li>
+		                    <li class="info-list__item"><i class="ion ion-android-chat" aria-hidden="true"></i> 7 Comments</li>
+		                  </ul> <!-- .item-info__list -->
+		                </div> <!-- .events-item__info -->
+                	</div> <!-- .events-item__content -->
+                </div> <!-- .events-item__header -->
+                <div class="events-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
+                </div> <!-- .events-item__text -->
+                <div class="events-item__link">
+                  <a href="index.html">Read More ➔</a>
+                </div> <!-- .events-item__link -->
+              </div> <!-- / .events-item__body -->
+						</div> <!-- .events__item -->
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-pull-3">
+						<div class="events__item">
+							<div class="events-item__img">
+                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+              </div>
+              <div class="events-item__body">
+                <div class="events-item__header">
+                	<div class="events-item__date">
+                		<p class="item_date__nbr">21</p>
+                		<p class="item_date__mounth">March</p>
+                	</div> <!-- .events-item__date -->
+                	<div class="events-item__content">
+                		<div class="events-item__title">
+		                  <h3>News post title</h3>
+		                </div>
+		                <div class="events-item__info">
+		                  <ul class="item-info__list">
+		                    <li class="info-list__item"><i class="ion ion-android-person"></i> by John Doe</li>
+		                    <li class="info-list__item"><i class="ion ion-android-chat" aria-hidden="true"></i> 9 Comments</li>
+		                  </ul> <!-- .item-info__list -->
+		                </div> <!-- .events-item__info -->
+                	</div> <!-- .events-item__content -->
+                </div> <!-- .events-item__header -->
+                <div class="events-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
+                </div> <!-- .events-item__text -->
+                <div class="events-item__link">
+                  <a href="index.html">Read More ➔</a>
+                </div> <!-- .events-item__link -->
+              </div> <!-- / .events-item__body -->
+						</div> <!-- .events__item -->
+					</div>
+	      </div> <!-- / .row -->
+	      <div class="row">
+	      	<div class="col-xs-12 hidden-xs col-sm-6 col-md-6 col-lg-3">
+	      		<div class="events__title">
+							<div>Events</div>
+						</div>
+	      	</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div class="events__item ">
+							<div class="events-item__img">
+                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+              </div>
+              <div class="events-item__body">
+                <div class="events-item__header">
+                	<div class="events-item__date">
+                		<p class="item_date__nbr">11</p>
+                		<p class="item_date__mounth">April</p>
+                	</div> <!-- .events-item__date -->
+                	<div class="events-item__content">
+                		<div class="events-item__title">
+		                  <h3>Event post title</h3>
+		                </div>
+		                <div class="events-item__info">
+		                  <ul class="item-info__list">
+		                    <li class="info-list__item"><i class="ion ion-android-person"></i> by John Doe</li>
+		                    <li class="info-list__item"><i class="ion ion-android-chat" aria-hidden="true"></i> 2 Comments</li>
+		                  </ul> <!-- .item-info__list -->
+		                </div> <!-- .events-item__info -->
+                	</div> <!-- .events-item__content -->
+                </div> <!-- .events-item__header -->
+                <div class="events-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
+                </div> <!-- .events-item__text -->
+                <div class="events-item__link">
+                  <a href="index.html">Read More ➔</a>
+                </div> <!-- .events-item__link -->
+              </div> <!-- / .events-item__body -->
+						</div> <!-- .events__item -->
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div class="events__item">
+							<div class="events-item__img">
+                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+              </div>
+              <div class="events-item__body">
+                <div class="events-item__header">
+                	<div class="events-item__date">
+                		<p class="item_date__nbr">14</p>
+                		<p class="item_date__mounth">April</p>
+                	</div> <!-- .events-item__date -->
+                	<div class="events-item__content">
+                		<div class="events-item__title">
+		                  <h3>Event post title</h3>
+		                </div>
+		                <div class="events-item__info">
+		                  <ul class="item-info__list">
+		                    <li class="info-list__item"><i class="ion ion-android-person"></i> by John Doe</li>
+		                    <li class="info-list__item"><i class="ion ion-android-chat" aria-hidden="true"></i> 11 Comments</li>
+		                  </ul> <!-- .item-info__list -->
+		                </div> <!-- .events-item__info -->
+                	</div> <!-- .events-item__content -->
+                </div> <!-- .events-item__header -->
+                <div class="events-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
+                </div> <!-- .events-item__text -->
+                <div class="events-item__link">
+                  <a href="index.html">Read More ➔</a>
+                </div> <!-- .events-item__link -->
+              </div> <!-- / .events-item__body -->
+						</div> <!-- .events__item -->
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div class="events__item">
+							<div class="events-item__img">
+                <img src="http://placehold.it/1920x1280" class="img-responsive" alt="...">
+              </div>
+              <div class="events-item__body">
+                <div class="events-item__header">
+                	<div class="events-item__date">
+                		<p class="item_date__nbr">16</p>
+                		<p class="item_date__mounth">April</p>
+                	</div> <!-- .events-item__date -->
+                	<div class="events-item__content">
+                		<div class="events-item__title">
+		                  <h3>Event post title</h3>
+		                </div>
+		                <div class="events-item__info">
+		                  <ul class="item-info__list">
+		                    <li class="info-list__item"><i class="ion ion-android-person"></i> by John Doe</li>
+		                    <li class="info-list__item"><i class="ion ion-android-chat" aria-hidden="true"></i> 8 Comments</li>
+		                  </ul> <!-- .item-info__list -->
+		                </div> <!-- .events-item__info -->
+                	</div> <!-- .events-item__content -->
+                </div> <!-- .events-item__header -->
+                <div class="events-item__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius dicta, magni, placeat sed excepturi tenetur. Unde esse repellendus saepe ipsa odio in laborum voluptas. Obcaecati quae.
+                </div> <!-- .events-item__text -->
+                <div class="events-item__link">
+                  <a href="index.html">Read More ➔</a>
+                </div> <!-- .events-item__link -->
+              </div> <!-- / .events-item__body -->
+						</div> <!-- .events__item -->
+					</div>
+	      </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section> <!-- / .section__events -->
+
+		<!-- section Contacts -->
+    <section class="section__contacts">
+    	<div class="container">
+    		<div class="row">
+    		  <div class="col-sm-12"> 		  	
+    				<h2 class="section__title"><strong>Contactez nous</strong> </h2>
+    				<div class="divider">
+    					<hr class="line1">
+    					<hr class="line2">
+    					<hr class="line1">
+    				</div> <!-- / .divider -->
+    		  </div>
+    		</div> <!-- / .row -->
+    	</div> <!-- / .container -->
+      <div class="section_row">
+        <div id="map"></div>
+      </div> <!-- / .section_row -->
+      <div class="container">
+      	<div class="row">
+	        <div class="col-sm-5">
+						<div class="contacts__info">
+							<p class="contacts_info__title">Informations</p>
+							<ul class="contacts_info__content">
+	              <li>
+	                <i class="icon ion-android-pin"></i>
+	                <div class="contact-info-content">
+	                  <div class="title">Addresse</div>
+	                  <div class="description">1365 Boulevard René-Lévesque Ouest, Québec, Canada, G1S-1W9
+
+</div>
+	                </div>
+	              </li>
+	              <li>
+	                <i class="icon ion-android-call"></i>
+	                <div class="contact-info-content">
+	                  <div class="title">Téléphone / Cell</div>
+	                  <div class="description">1 (418) 527-3907 /  1 (418) 369-8255</div>
+	                </div>
+	              </li>
+	              <li>
+	                <i class="icon ion-android-mail"></i>
+	                <div class="contact-info-content">
+	                  <div class="title">E-mail</div>
+	                </div>
+	                  <div class="description">AubergeHotelVillaRoyale@gmail.com</div>
+	              </li>
+	            </ul> <!-- .contacts_info__content -->
+						</div> <!-- / .contacts__info -->
+						<p class="subheading">Si vous avez des questions, n'hésitez pas à nous contacter.</p>
+	        </div>
+	        <div class="col-sm-7">
+	        	<div class="section-contacts__form_body">
+              
+
+              <!-- Alert message -->
+              <div class="alert" id="form_message" role="alert"></div>
+							
+							<p class="section-contacts__title">Contactez</p>
+
+              <!-- Please carefully read the README file in order to setup the PHP contact form properly -->
+              <form id="form_sendemail" class="contacts__form">
+                <div class="form-group">
+                  <label for="email">Addresse Email (Champs obligatoires)</label>
+                  <input type="email" name="email" class="form-control" id="email" placeholder="Entrer votre Email">
+                  <span class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Nom  (Champs obligatoires)</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Entrez votre nom complet">
+                  <span class="help-block"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message  (Champs obligatoires)</label>
+                  <textarea name="message" class="form-control" rows="6" id="message" placeholder="Entrez votre message"></textarea>
+                  <span class="help-block"></span>
+                </div>
+                <!-- reCAPTCHA -->
+                <div class="form-group" id="form-captcha">
+                  <div class="g-recaptcha" data-sitekey="6LcH1RcUAAAAACsvookS7-U-Hx48PioWoSCgsbH6"></div>
+                  <span class="help-block"></span>
+                </div>
+                <!-- /reCAPTCHA -->
+                <div class="btn-group">
+                  <button type="submit" class="btn">
+                    Envoyer le message
+                  </button>
+                </div>
+              </form> <!-- .contacts__form -->
+            </div> <!-- / .secction-contacts__form_body -->
+	        </div>
+	      </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section> <!-- / .section__contacts -->
+
+		<!-- section footer -->
+		
+		@@include('./footer.html')
+
+    <!-- 
+    ================================================== -->
+
+    <!-- JS Global -->
+    <script src="assets/plugins/jquery/jquery-1.12.4.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- JS Plugins -->
+    <script src="assets/plugins/moment-develop/min/moment-with-locales.min.js"></script>
+    <script src="assets/plugins/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+		<script src="assets/plugins/lightbox/dist/js/lightbox.min.js"></script>
+		<script src="assets/plugins/owl-carousel/dist/owl.carousel.min.js"></script>
+		<script src="assets/plugins/contact-form/contact.js"></script>
+
+    <!-- JS Custom -->
+    <!--build:js assets/js/theme.min.js -->
+    <script src="assets/js/theme.js"></script>
+	<script type="text/javascript" src="http://api.eventful.com/js/api"></script>
+    <script src="assets/js/date_select.js"></script>
+    <!-- endbuild -->
+		<script src="assets/js/google_maps.js"></script>
+
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTGnDWmYKPhKslCvPfkrcZDpgT_QMHT0s&callback=initMap" async defer></script>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+/**
+ * Forms
+ */
+
+@input-bg: transparent;
+@input-border: #ccc;
+@input-border-focus: @brand-accent;
+@input-color-placeholder: @gray;
+@input-border-radius: 2px;
+@input-height-base: (@line-height-computed + (@padding-base-vertical * 2) + 6);
+@form-group-margin-bottom: 20px;
+
+
+.form-control {
+    font-size: (@font-size-base + 2px);
+    letter-spacing: 1px;
+    box-shadow: none;
+    option:not(selected) {
+        color: @brand-accent;
+    }
+}
+
+.contacts__form, .comments__form {
+	> .form-group {
+		label {
+			letter-spacing: 0.05em;
+			font-style: italic;
+			margin-left: 3px;
+			font-size: (@font-size-base - 1px);
+			font-family: 'Playfair Display', serif;
+		}
+		> .form-control {
+			font-size: (@font-size-base - 2px);
+			box-shadow: none;
+		}
+		> input {
+			height: 38px;
+			@media (max-width: @screen-xs-max) {
+				height: 32px;
+			}
+		}		
+	}
+	.btn-group {
+		display: inline-block;
+		float: right;
+		@media(max-width: @screen-md-max) {
+	        float: none;
+	    }
+		@media(max-width: @screen-sm-max) {
+	        float: none;
+	    }
+		@media(max-width: @screen-xs-max) {
+	        float: none;
+	    }
+	}
+	#form-captcha {
+		display: inline-block;
+	}
+}

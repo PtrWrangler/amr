@@ -1,0 +1,93 @@
+/**
+ * Buttons
+ */
+
+ .btn {
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: (@font-size-base - 1px);
+    letter-spacing: 0.5px;
+    border-color: @brand-accent;
+    background-color: transparent;
+    transition: all 0.3s ease-out;
+    border-radius: 0;
+    text-transform: uppercase;
+    &:hover, &:focus, &:active, &:active:focus {
+    	border-color: @brand-primary;
+        background-color: transparent;
+    }
+    @media (max-width: @screen-xs-max) {
+        padding: 8px 15px;
+        font-size: (@font-size-base - 2px);
+    }
+}
+
+.btn-search {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+ 	border-color: transparent;
+ 	padding: 0 6px;
+ 	transition: color .3s;
+ 	&:hover, &:focus, &:active, &:active:focus {
+ 		background-color: transparent;
+		color: @brand-accent;
+		border-color: transparent;
+ 	}
+    > i {
+        font-size: 16px;
+    }
+}
+
+.btn-reservation {
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    &:hover, &:focus {
+        color: @brand-primary;
+        border-color: @brand-accent;
+        background-color: @brand-accent;
+    }
+}
+
+.btn-newsletter {
+ 	border-color: transparent;
+ 	padding: 0 6px;
+ 	color: rgb(255, 255, 255);
+ 	position: absolute;
+ 	top: 1px;
+ 	right: 1px;
+ 	transition: color .3s;
+ 	&:hover, &:focus, &:active, &:active:focus {
+ 		background-color: transparent;
+		color: @brand-accent;
+		border-color: transparent;
+ 	}
+    > i {
+        font-size: 20px;
+    }
+}
+
+.btn-filter {
+    padding: 8px 0;
+    text-transform: uppercase;
+    font-size: (@font-size-base - 1px);
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    @media(max-width: @screen-xs-max) {
+        margin: 0;
+        font-size: (@font-size-base - 2px);
+    }
+    &:hover, &:focus, &:active, &:active:focus {
+        color: @brand-accent;
+    }
+    &:active, &:focus {
+        border-bottom: 3px solid @brand-accent;
+    }
+}
+
+.btn-booking {
+    margin-top: 20px;
+    @media(max-width: @screen-xs-max) {
+        margin: 10px 0;
+    }
+}
